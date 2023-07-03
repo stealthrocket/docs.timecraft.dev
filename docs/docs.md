@@ -14,13 +14,13 @@ Let's discover **Docusaurus in less than 5 minutes**.
 
 First step, install and configure Timecraft:
 
-- [Installing Timecraft](./getting-started/installation.md)
-- [Configuring Timecraft](./getting-started/configuration.md)
+- [Installing Timecraft](/getting-started/installation.md)
+- [Configuring Timecraft](/getting-started/configuration.md)
 
 You will then have to compile your application to WebAssembly:
 
-- [Compiling your Go application to WebAssembly](./getting-started/compling-go.md)
-- [Compiling your Python application to WebAssembly](./getting-started/compling-python.md)
+- [Compiling your Go application to WebAssembly](/getting-started/compiling-go.md)
+- [Compiling your Python application to WebAssembly](/getting-started/compiling-python.md)
 
 
 ## Community
