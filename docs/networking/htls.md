@@ -11,10 +11,15 @@ abilities. They will be supported as needed. [Send a pull request!][htls-code]
 
 [htls-code]: https://github.com/search?q=repo%3Astealthrocket%2Ftimecraft+htls+path%3A%2F%5Einternal%5C%2F%2F&type=code
 
+In this document, the following are constants:
+
+* `TIMECRAFT_LEVEL`: `0x74696d65`
+* `HTLS_OPTION`: `1`
+
 ## Usage
 
 After opening a socket, use the `sock_setsockopt` host function to set the
-option `1` of level `0x74696d65` to the hostname to connect to.
+option `HTLS_OPTION` of level `TIMECRAFT_LEVEL` to the hostname to connect to.
 
 ### Go
 
@@ -94,7 +99,7 @@ getaddrinfo("example.com", "443", &hints, &res);
 
 int sock = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
 connect(sock, res->ai_addr, res->ai_addrlen);
-setsockopt(sock, 0x74696d65, 1, "example.com", sizeof("example.com"));
+setsockopt(sock, TIMECRAFT_LEVEL, HTLS_OPTION, "example.com", sizeof("example.com"));
 
 // send/recv...
 ```
@@ -107,8 +112,8 @@ setsockopt(sock, 0x74696d65, 1, "example.com", sizeof("example.com"));
    `wasi_snapshot_preview1.sock_open`.
 2. Connect the socket with WASM host function socket
    `wasi_snapshot_preview1.sock_connect`.
-3. Set the option `1` of level `0x74696d65` to the hostname of the server using
-   `wasi_snapshot_preview1.sock_setsockopt`.
+3. Set the option `HTLS_OPTION` of level `TIMECRAFT_LEVEL` to the hostname of
+   the server using `wasi_snapshot_preview1.sock_setsockopt`.
 4. Use the socket knowing hTLS is enabled.
 
 ## How it works
@@ -139,7 +144,7 @@ sequenceDiagram
     Guest->>Host: socket()
     Host-->>Guest: fd=4
 	Guest->>Host: connect("example.com", 443)
-	Guest->>Host: setsockopt(4, 0x74696d65, 1, "example.com")
+	Guest->>Host: setsockopt(4, TIMECRAFT_OPTION, HTLS_OPTION, "example.com")
 	Host->>Example.com: dial
 	Host->Example.com: TLS handshake
 	loop connection is ready
