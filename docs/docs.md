@@ -17,8 +17,8 @@ First step, install and configure Timecraft:
 
 You will then have to compile your application to WebAssembly:
 
-- [Compiling your Go application to WebAssembly](/getting-started/compiling-go.md)
-- [Compiling your Python application to WebAssembly](/getting-started/compiling-python.md)
+- [Compiling your Go application to WebAssembly](/getting-started/prep-application/compiling-go)
+- [Compiling your Python application to WebAssembly](/getting-started/prep-application/compiling-python)
 
 
 ## Community
