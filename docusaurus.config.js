@@ -89,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/_stealthrocket',
               },
             ],
           },
