@@ -8,8 +8,6 @@ slug: /
 Timecraft is an application runtime providing a Time Machine and a Task Orchestration capability.
 Built on top of Wazero, Timecraft leverage the WebAssembly sandbox.
 
-Let's discover **Docusaurus in less than 5 minutes**.
-
 ## Getting Started
 
 First step, install and configure Timecraft:
