@@ -3,18 +3,28 @@
 Timecraft provides host TLS offload (hTLS). After a socket is open, timecraft
 can be instructed to wrap it in a TLS tunnel. Once it is, reads and writes on
 the socket are transparently encrypted and decrypted. It allows the WebAssembly
-guest to delegate offload TLS operations to the host, to reduce its complexity
-and increase performance.
+guest to delegate offload TLS operations to the host. This has multiple advantages over performing encryption in the guest:
+
+* it reduces the code complexity of the guest,
+* significantly increases performance (cryptography operations can be
+  prohibitively expensive in WebAssembly at the moment),
+* makes all built-in Timeceraft [network and syscall tracing][tracing]
+  features work seamlessly with no additional configuration.
 
 At the moment, only client-side TLS is supported, with no configuration
-abilities. They will be supported as needed. [Send a pull request!][htls-code]
+abilities. Server-side and further configuration options will be supported as
+needed. [Send a pull request!][htls-code]
 
-[htls-code]: https://github.com/search?q=repo%3Astealthrocket%2Ftimecraft+htls+path%3A%2F%5Einternal%5C%2F%2F&type=code
+[htls-code]: https://github.com/stealthrocket/timecraft
+[tracing]: /using-timecraft/execution-tracing.md
 
-In this document, the following are constants:
+At a very high level, hTLS works by setting a special option on a socket. How
+to set that option is described in the [Usage](#usage) section below. Socket
+options have a level and an option name. In this document we use the following
+constants to refer to them:
 
-* `TIMECRAFT_LEVEL`: `0x74696d65`
-* `HTLS_OPTION`: `1`
+* `TIMECRAFT_LEVEL = 0x74696d65`: the socket level of the socket option.
+* `HTLS_OPTION = 1`: the name of the hTLS option.
 
 ## Usage
 
