@@ -3,7 +3,8 @@
 Timecraft provides host TLS offload (hTLS). After a socket is open, timecraft
 can be instructed to wrap it in a TLS tunnel. Once it is, reads and writes on
 the socket are transparently encrypted and decrypted. It allows the WebAssembly
-guest to delegate offload TLS operations to the host. This has multiple advantages over performing encryption in the guest:
+guest to delegate offload TLS operations to the host. This has multiple
+advantages over performing encryption in the guest:
 
 * it reduces the code complexity of the guest,
 * significantly increases performance (cryptography operations can be
