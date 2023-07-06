@@ -99,18 +99,22 @@ const config = {
                 label: 'Discord',
                 href: 'https://stealthrocket.com/discord',
               },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/stealthrocket/timecraft',
+              },
             ],
           },
           {
-            title: 'More',
+            title: 'Company',
             items: [
               {
                 label: 'Stealth Rocket',
                 to: 'https://stealthrocket.tech',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/stealthrocket/timecraft',
+                label: 'Blog Rocket',
+                to: 'https://blog.stealthrocket.tech',
               },
             ],
           },
