@@ -113,7 +113,7 @@ const config = {
                 to: 'https://stealthrocket.tech',
               },
               {
-                label: 'Blog Rocket',
+                label: 'Blog',
                 to: 'https://blog.stealthrocket.tech',
               },
             ],
