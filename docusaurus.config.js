@@ -95,6 +95,10 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/_stealthrocket',
               },
+              {
+                label: 'Discord',
+                href: 'https://stealthrocket.com/discord',
+              },
             ],
           },
           {
