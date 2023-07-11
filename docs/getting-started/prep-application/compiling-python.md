@@ -12,8 +12,8 @@ create servers and connect to databases. We intend to upstream our patches at so
 We provide a pre-compiled Python interpreter and patched standard library. You can download them by running
 
 ```
-curl -fsSL https://timecraft.s3.amazonaws.com/python/nightly/python.wasm -o python.wasm
-curl -fsSL https://timecraft.s3.amazonaws.com/python/nightly/python311.zip -o python311.zip
+curl -fsSL https://timecraft.s3.amazonaws.com/python/main/python.wasm -o python.wasm
+curl -fsSL https://timecraft.s3.amazonaws.com/python/main/python311.zip -o python311.zip
 ```
 
 To build Python from scratch, see the instructions in the
