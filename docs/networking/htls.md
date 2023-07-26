@@ -92,7 +92,7 @@ with socket.create_connection((hostname, 443)) as sock:
         print(buf[:nbytes])
 ```
 
-[python]: /getting-started/prep-application/compiling-python.md
+[python]: /getting-started/applications/python
 [requests]: https://requests.readthedocs.io/en/latest/
 
 ### C
