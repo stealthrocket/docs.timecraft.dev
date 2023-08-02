@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_timecraft_dev=self.webpackChunkdocs_timecraft_dev||[]).push([[678],{8951:e=>{e.exports=JSON.parse('{"title":"Guides","slug":"/category/guides","permalink":"/category/guides","navigation":{"previous":{"title":"Python","permalink":"/applications/python"},"next":{"title":"Durable execution","permalink":"/guides/durable-execution"}}}')}}]);
