@@ -4,27 +4,27 @@
 
 Go 1.21, due to be released in August 2023, will be able to natively compile Go applications to WebAssembly.
 
-```console
-$ GOOS=wasip1 GOARCH=wasm go build ...
+```bash
+GOOS=wasip1 GOARCH=wasm go build ...
 ```
 
 Since Go 1.21 has not been released yet, you can use [`gotip`](https://pkg.go.dev/golang.org/dl/gotip) to test these features before release:
 
-```console
-$ go install golang.org/dl/gotip@latest
-$ gotip download
+```bash
+go install golang.org/dl/gotip@latest
+gotip download
 ```
 
-```console
-$ GOOS=wasip1 GOARCH=wasm gotip build ...
+```bash
+GOOS=wasip1 GOARCH=wasm gotip build ...
 ```
 
 ## Compiling your application
 
 Instead of using `go build`, use:
 
-```console
-$ GOOS=wasip1 GOARCH=wasm gotip build -o app.wasm <path/to/main/pkg>
+```
+GOOS=wasip1 GOARCH=wasm gotip build -o app.wasm <path/to/main/pkg>
 ```
 
 This will build a WebAssembly module that can be run with Timecraft.
@@ -33,15 +33,15 @@ This will build a WebAssembly module that can be run with Timecraft.
 
 To run your application:
 
-```console
-$ timecraft run app.wasm
+```bash
+timecraft run app.wasm
 ```
 
 Command-line arguments can be specified after the WebAssembly module. To prevent
 Timecraft from interpreting command-line options for the application, use:
 
-```console
-$ timecraft run -- app.wasm arg1 arg2 ...
+```bash
+timecraft run -- app.wasm arg1 arg2 ...
 ```
 
 Note that environment variables passed to Timecraft are automatically passed to the

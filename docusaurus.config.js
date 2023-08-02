@@ -120,15 +120,34 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Stealth Rocket, Inc. Built with Docusaurus.`,
       },
-      prism: {
-        theme: lightCodeTheme,
+      //prism: {
+      //  theme: lightCodeTheme,
+      //  darkTheme: darkCodeTheme,
+      //},
+              prism: {
+        theme: darkCodeTheme,
+        lightTheme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      codeblock: {
+          showGithubLink: true,
+          githubLinkLabel: 'View on GitHub',
+          showRunmeLink: false,
+          runmeLinkLabel: 'Checkout via Runme'
+      },
+      algolia: {
+          appId: 'QMCCRBQ4VJ',
+          apiKey: 'e1870d7fb6e9a2c21f265f9ea7e48ec1',
+          indexName: 'timecraft',
       },
     }),
       markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+      '@docusaurus/theme-mermaid',
+      'docusaurus-theme-github-codeblock'
+  ],
 
 };
 
