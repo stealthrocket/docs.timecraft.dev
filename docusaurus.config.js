@@ -120,11 +120,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Stealth Rocket, Inc. Built with Docusaurus.`,
       },
-      //prism: {
-      //  theme: lightCodeTheme,
-      //  darkTheme: darkCodeTheme,
-      //},
-              prism: {
+      prism: {
         theme: darkCodeTheme,
         lightTheme: lightCodeTheme,
         darkTheme: darkCodeTheme,
